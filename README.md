@@ -65,7 +65,7 @@ Here's an example:
 ├── Better.Call.Saul.S02E08.1080p.BluRay.x265-RARBG.mp4
 ├── Better.Call.Saul.S02E09.1080p.BluRay.x265-RARBG.mp4
 ├── Better.Call.Saul.S02E10.1080p.BluRay.x265-RARBG.mp4
-├── Ok
+├── renamedSubtitles
 │   ├── Better.Call.Saul.S02E01.1080p.BluRay.x265-RARBG-0.srt
 │   ├── Better.Call.Saul.S02E01.1080p.BluRay.x265-RARBG-1.srt
 │   ├── Better.Call.Saul.S02E02.1080p.BluRay.x265-RARBG-0.srt
