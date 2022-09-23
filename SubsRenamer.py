@@ -18,8 +18,8 @@ print("Choose the directory")
 time.sleep(3)
 directory = files.askForDirectory()
 filelist = files.findFilesFromExtension(directory, 'srt')
-ok_directory = directory + "/Ok"
-os.mkdir(ok_directory)
+renamed_directory = directory + "/renamedSubtitles"
+os.mkdir(renamed_directory)
 prev = ""
 count = 0
 for file in filelist:
@@ -28,9 +28,9 @@ for file in filelist:
         count += 1
     else:
         count = 0
-    new_location = ok_directory + "/" + parent_directory_name + "-" + str(count) + ".srt"
+    new_location = renamed_directory + "/" + parent_directory_name + "-" + str(count) + ".srt"
     shutil.copyfile(file, new_location)
     prev = parent_directory_name
 
 clear()
-print("Subtitles have been copied in " + ok_directory)
+print("Subtitles have been renamed and copied in " + renamed_directory)
