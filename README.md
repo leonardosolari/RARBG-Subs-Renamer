@@ -125,6 +125,8 @@ Here's an example:
 12 directories, 54 files
 
 ```
+As you can see it should handle duplicates and the original files are not touched. 
+Anyway I DO NOT TAKE ANY RESPONSIBILITY FOR ANY EVENTUAL FILE LOSS.
 
 ## Installation 
 
