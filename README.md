@@ -1,8 +1,15 @@
 # RARBG-Subs-Renamer
 
 If you download a tv show from RARBG, chances are that the subtitles files will be in separate directories and each one will have almost the same name.
-This simple program takes each .srt file, it renames the file and copies it in a new directory. The new file name will be the one of its father directory, so make sure it suits your case. 
-Here's an example:
+This simple program takes each .srt file, it renames the file and copies it in a new location. The new file name will be the one of the video file it referes to.
+At the moment the program works with the typical structure of RARBG releases of movies and tv shows.  
+
+Feel free to contribute by suggesting any typical file structure you know of.
+
+# Example
+Here's an example of the folder structure before and after using the program:
+
+## RARBG TV Shows
 ### Before
 ```bash
 .
@@ -125,6 +132,35 @@ Here's an example:
 12 directories, 54 files
 
 ```
+
+## RARBG Movies
+### Before
+```bash
+.
+└── Armageddon.1998.1080p.BluRay.x265-RARBG
+    ├── Armageddon.1998.1080p.BluRay.x265-RARBG.mp4
+    ├── RARBG.txt
+    ├── RARBG_DO_NOT_MIRROR.exe
+    └── Subs
+        └── 2_English.srt
+
+2 directories, 4 files
+
+```
+### After
+```bash
+.
+└── Armageddon.1998.1080p.BluRay.x265-RARBG
+    ├── Armageddon.1998.1080p.BluRay.x265-RARBG.mp4
+    ├── RARBG.txt
+    ├── RARBG_DO_NOT_MIRROR.exe
+    └── Subs
+        └── 2_English.srt
+
+2 directories, 4 files
+
+```
+
 As you can see it should handle duplicates and the original files are not touched. 
 Anyway I DO NOT TAKE ANY RESPONSIBILITY FOR ANY EVENTUAL FILE LOSS.
 

@@ -1,6 +1,7 @@
 from models import files
 import os
 import shutil
+from termcolor import colored
 
 def run(directory):
     filelist = files.findFilesFromExtension(directory, 'srt')
@@ -22,4 +23,4 @@ def run(directory):
         prev = parent_directory_name
 
     print("")
-    print("Subtitles have been renamed and copied in " + renamed_directory)
+    print("Subtitles have been renamed and copied in " + colored(renamed_directory, "green"))
