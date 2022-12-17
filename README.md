@@ -151,13 +151,14 @@ Here's an example of the folder structure before and after using the program:
 ```bash
 .
 └── Armageddon.1998.1080p.BluRay.x265-RARBG
+    ├── Armageddon.1998.1080p.BluRay.x265-RARBG-0.srt
     ├── Armageddon.1998.1080p.BluRay.x265-RARBG.mp4
     ├── RARBG.txt
     ├── RARBG_DO_NOT_MIRROR.exe
     └── Subs
         └── 2_English.srt
 
-2 directories, 4 files
+2 directories, 5 files
 
 ```
 
