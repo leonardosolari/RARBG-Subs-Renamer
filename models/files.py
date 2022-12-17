@@ -12,6 +12,7 @@ def askForDirectory():
     root.withdraw() #hides small tkinter window
     root.attributes('-topmost', True) # Opened windows will be active. above all windows despite of selection
     directory_path = filedialog.askdirectory() #returns opened path as str
+    root.destroy()
     return directory_path
 
 

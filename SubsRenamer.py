@@ -1,8 +1,7 @@
-import files
+from models import files, RARBGmovies, RARBGtvshows
 import os
 from os import name
-import shutil
-import time
+from termcolor import colored
 
 def clear():
     #for windows 
@@ -12,25 +11,40 @@ def clear():
     else:
         _ = os.system('clear')
 
+def banner():
+    print(colored("""
+ _____       _         ______                                     
+/  ___|     | |        | ___ \                                    
+\ `--. _   _| |__  ___ | |_/ /___ _ __   __ _ _ __ ___   ___ _ __ 
+ `--. \ | | | '_ \/ __||    // _ \ '_ \ / _` | '_ ` _ \ / _ \ '__|
+/\__/ / |_| | |_) \__ \| |\ \  __/ | | | (_| | | | | | |  __/ |   
+\____/ \__,_|_.__/|___/\_| \_\___|_| |_|\__,_|_| |_| |_|\___|_|
+    """, "red"))
 
-clear()
-print("Choose the directory")
-time.sleep(3)
-directory = files.askForDirectory()
-filelist = files.findFilesFromExtension(directory, 'srt')
-renamed_directory = directory + "/renamedSubtitles"
-os.mkdir(renamed_directory)
-prev = ""
-count = 0
-for file in filelist:
-    parent_directory_name = files.fileNameFromPath((os.path.abspath(os.path.join(file, os.pardir))))
-    if prev == parent_directory_name:
-        count += 1
-    else:
-        count = 0
-    new_location = renamed_directory + "/" + parent_directory_name + "-" + str(count) + ".srt"
-    shutil.copyfile(file, new_location)
-    prev = parent_directory_name
 
-clear()
-print("Subtitles have been renamed and copied in " + renamed_directory)
+if __name__ == "__main__":
+
+    clear()
+    banner()
+    print("What subtitles are we working with?")
+    print("(1) - RARBG movie\n(2) - RARBG tv show")
+    mode = input("Choose a mode: ")
+    
+    print("Choose the directory")
+    directory = files.askForDirectory()
+
+    clear()
+    banner()
+    print("Every subtitle file found in " + colored(directory, "green") + " will be renamed and copied according to the choosen model.")
+
+    stop = input("Are you sure? (Y/N) ")
+    if (stop.upper() == "N"):
+        exit()
+
+    if(stop.upper() == "Y"):
+        if (mode == "1"):
+            RARBGmovies.run(directory)
+
+        if (mode == "2"):
+            RARBGtvshows.run(directory)
+
