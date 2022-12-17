@@ -1,8 +1,8 @@
 # RARBG-Subs-Renamer
 
-If you download a tv show from RARBG, chances are that the subtitles files will be in separate directories and each one will have almost the same name.
+If you download a movie or a tv show from RARBG, chances are that the subtitles files will be in separate directories and each one will have almost the same name.
 This simple program takes each .srt file, it renames the file and copies it in a new location. The new file name will be the one of the video file it referes to.
-At the moment the program works with the typical structure of RARBG releases of movies and tv shows.  
+At the moment the program works with the typical structure of RARBG releases of movies and tv shows. It ignores every subtitle file that is not in english. A simple workaround would be to change the ```substring``` variable content in /models/RARBGmovies.py and /models/RARBGtvshows.py 
 
 Feel free to contribute by suggesting any typical file structure you know of.
 
