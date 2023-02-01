@@ -22,7 +22,7 @@ def run(directory):
     filelist = files.findFilesFromExtension(directory, 'srt')
     prev = ""
     count = 0
-    substrings = ["english", "eng", "italian", "ita"]
+    substrings = ["eng", "ita"]
     for substring in substrings:
         for file in filelist:
             if (substring not in file.lower()):
