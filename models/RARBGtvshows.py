@@ -26,7 +26,7 @@ def run(directory):
     os.mkdir(renamed_directory)
     prev = ""
     count = 0
-    substrings = ["eng", s"ita"]
+    substrings = ["eng", "ita"]
     for substring in substrings:
         for file in filelist:
             if (substring not in file.lower()):
